@@ -1,3 +1,5 @@
+사용 허용합니다
+회사 공개용 code
 #include <iostream>
 #include <vector>
 #include <string>
