@@ -50,3 +50,20 @@ int main() {
     
 return 0;
 }
+
+cd "/Users/satanhouse/Desktop/죽은 개발자/작업파일/" && g++ -std=c++20 AIsin.cpp -o AIsin && "/Users/satanhouse/Desktop/죽은 개발자/작업파일/"AIsin
+satanhouse@SATAN-MacBook-Pro 작업파일 % cd "/Users/satanhouse/Desktop/죽은 개발자/작업파일/" && g++ -std=c++20 AIsin.cpp -o AIsin && "/Users/satanhouse/Desktop/죽은 개발자/작업파일/"AIsin
+AI 메모리 연산:
+대문자: AI 메모리 연산:
+Sin 결과:
+sin(1도) = 0.0174524
+sin(100도) = 0.984808
+sin(1000도) = -0.984808
+sin(10000도) = -0.984808
+sin(100000도) = -0.984808
+sin(1000000도) = -0.984808
+sin(1000000도) = -0.984808
+sin(10000000도) = -0.984808
+commend
+satanhouse@SATAN-MacBook-Pro 작업파일 % 
+결과 값
