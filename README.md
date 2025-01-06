@@ -70,49 +70,4 @@ sin(1000000도) = -0.984808
 sin(1000000도) = -0.984808
 sin(10000000도) = -0.984808
 commend
-satanhouse@SATAN-MacBook-Pro 작업파일 % 
-결과 값
 
-#incldue <sint>
-
-# Framework: Standard Python Libraries
-
-import math
-
-# Create a vector of numbers
-numbers = [1, 100, 1000, 10000, 100000, 1000000, 1000000, 10000000]
-sin_values = [0.0] * len(numbers)
-
-for index in range(len(numbers)):
-    # Calculate trigonometric function
-    radians = numbers[index] * (math.pi / 180.0)  # Convert degrees to radians
-    sin_values[index] = math.sin(radians)
-
-# Create and print string message
-message = "AI 메모리 연산:"
-print(message)
-
-# Convert message to uppercase
-for index in range(len(message)):
-    if message[index].isalpha():
-        message = message[:index] + message[index].upper() + message[index + 1:]
-
-print("대문자:", message)
-
-# Print sin values
-print("Sin 결과:")
-for index in range(len(numbers)):
-    print(f"sin({numbers[index]}도) = {sin_values[index]}")
-
-# Read bitset from file
-try:
-    with open("bitset_output.txt", "r") as in_file:
-        bitset_str = in_file.read().strip()  # Read bitset as string
-
-        # Dynamic handling of bitset size
-        bset = int(bitset_str, 2)  # Convert binary string to integer
-        print("파일에서 읽은 비트 집합:", bin(bset))
-except FileNotFoundError:
-    print("commend")
-
-numbers = [1, 10, 2, 20, 3, 30, 4, 40, 5, 50]
