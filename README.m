@@ -1,4 +1,3 @@
-code
 #include <iostream>
 #include <vector>
 #include <string>
@@ -10,62 +9,52 @@ code
 using namespace std;
 
 int main() {
-    // <vector> 사용: 숫자 벡터 생성
-    vector<int>numbers = {1, 100, 1000, 10000, 100000, 1000000, 1000000, 10000000, };
+    // <vector> usage: Create a number vector
+    vector<int> numbers = {1, 100, 1000, 10000, 100000, 1000000, 1000000, 10000000};
     vector<double> sinValues(numbers.size());
-    
- for (size_t i = 0;  i < numbers.size(); i++) {
-        // <cmath> 사용: 삼각 함수 계산
-        double radians = numbers[i] * (M_PI / 180.0); // 도(degree) -> 라디안 변환
+
+    for (size_t i = 0; i < numbers.size(); i++) {
+        // <cmath> usage: Calculate trigonometric function
+        double radians = numbers[i] * (M_PI / 180.0); // Convert degrees to radians
         sinValues[i] = sin(radians);
     }
-    
- // <string> 사용: 문자열 생성 및 출력
-    string message = "AI 메모리 연산:";
+
+    // <string> usage: Create and print a string
+    string message = "AI Memory Operation:";
     cout << message << endl;
 
- // <cctype> 사용: 메시지를 대문자로 변환
+    // <cctype> usage: Convert message to uppercase
     for (char &ch : message) {
         if (isalpha(ch)) {
             ch = toupper(ch);
         }
     }
-    cout << "대문자: " << message << endl;
-    
- // sin 값 출력
-    cout << "Sin 결과:" << endl;
+    cout << "Uppercase: " << message << endl;
+
+    // Print sin values
+    cout << "Sin Results:" << endl;
     for (size_t i = 0; i < numbers.size(); i++) {
-        cout << "sin(" << numbers[i] << "도) = " << sinValues[i] << endl;
+        cout << "sin(" << numbers[i] << " degrees) = " << sinValues[i] << endl;
     }
-     ifstream inFile("bitset_output.txt");
+
+    ifstream inFile("bitset_output.txt");
     if (inFile.is_open()) {
         string bitsetStr;
-        inFile >> bitsetStr; // 비트 집합을 문자열로 읽기
-        
-   // 비트 집합 크기 동적 처리
-        bitset<64> bset(bitsetStr); // 최대 64비트까지 처리 가능
-        cout << "파일에서 읽은 비트 집합: " << bset << endl;
+        inFile >> bitsetStr; // Read bitset as string
+
+        // Dynamic bitset size handling
+        bitset<64> bset(bitsetStr); // Supports up to 64 bits
+        cout << "Bitset read from file: " << bset << endl;
         inFile.close();
     } else {
-        cout << "commend" << endl;
+        cout << "Command" << endl;
     }
-vector<int> numbers = {1,10,2,20,3,30,4,40,5,50};
-for(size.s 1[i]<int>); /n'
 
-return 0;
+    vector<int> numbers2 = {1, 10, 2, 20, 3, 30, 4, 40, 5, 50};
+    for (size_t i = 0; i < numbers2.size(); i++) {
+        cout << numbers2[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
 }
-
-cd
-AI 메모리 연산:
-대문자: AI 메모리 연산:
-Sin 결과:
-sin(1도) = 0.0174524
-sin(100도) = 0.984808
-sin(1000도) = -0.984808
-sin(10000도) = -0.984808
-sin(100000도) = -0.984808
-sin(1000000도) = -0.984808
-sin(1000000도) = -0.984808
-sin(10000000도) = -0.984808
-commend
-//기본 원형 구하기 게임//
